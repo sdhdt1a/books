@@ -1,42 +1,51 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>Book Lover&#x27;s Corner</title>
 <meta name="description" content="Hand-picked reads you won&#x27;t put down"><style>
-:root{--bg:#0f0b0d;--card:#1b1417;--ink:#f6efe9;--muted:#b9aaa2;--acc:#d6af60;--acc2:#8f1d2c}
+:root{--bg:#0f0b0d;--card:#1b1417;--ink:#f6efe9;--muted:#b9aaa2;--acc:#d6af60}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Georgia,'Times New Roman',serif}
-header{text-align:center;padding:40px 16px 18px}
-header h1{margin:0;font-size:30px;letter-spacing:.5px}
+header{text-align:center;padding:36px 16px 12px}header h1{margin:0;font-size:30px}
 header p{margin:6px 0 0;color:var(--muted);font-style:italic}
-main{max-width:720px;margin:0 auto;padding:8px 16px 48px;display:grid;gap:18px}
-.book{display:grid;grid-template-columns:120px 1fr;gap:16px;background:var(--card);border:1px solid #2c2226;border-radius:14px;padding:14px}
-.book img{width:120px;height:auto;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,.5)}
-.book h2{margin:0 0 2px;font-size:20px;line-height:1.25}
-.by{color:var(--muted);font-size:14px;margin-bottom:8px}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:10px 16px 6px;max-width:760px;margin:0 auto}
+nav button{font:600 13px/1 system-ui,sans-serif;background:transparent;color:var(--acc);border:1px solid var(--acc);
+border-radius:999px;padding:9px 14px;cursor:pointer}nav button.on{background:var(--acc);color:#1a1205}
+main{max-width:760px;margin:0 auto;padding:12px 16px 40px;display:grid;gap:22px}
+.free{background:linear-gradient(135deg,#3a1520,#1b1417);border:1px solid var(--acc);border-radius:14px;padding:18px;text-align:center}
+.free h2{margin:0 0 6px;font-size:21px}.free p{margin:0 0 12px;color:#e6dcd5}
+.series{background:var(--card);border:1px solid #2c2226;border-radius:14px;padding:16px}
+.series h2{margin:0 0 2px;font-size:21px}.series .meta{color:var(--muted);font-size:14px;margin-bottom:12px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
 .tags span{font:12px/1 system-ui,sans-serif;border:1px solid var(--acc);color:var(--acc);border-radius:20px;padding:5px 9px}
 .desc{font-size:14.5px;color:#e6dcd5;margin:0 0 12px}
+.vols{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:12px;margin:10px 0 12px}
+.vol{text-decoration:none;color:var(--ink)}.vol img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:6px;
+box-shadow:0 6px 16px rgba(0,0,0,.5);background:#2a2024}.vol b{display:block;font:600 12px/1.3 system-ui,sans-serif;color:var(--acc);margin-top:6px}
+.vol span{display:block;font-size:13px;line-height:1.3}
 .btn{display:inline-block;background:var(--acc);color:#1a1205;font:600 15px/1 system-ui,sans-serif;text-decoration:none;
-padding:12px 18px;border-radius:999px}
-.btn:active{transform:translateY(1px)}
+padding:12px 18px;border-radius:999px;margin:4px 6px 0 0}.btn.ghost{background:transparent;color:var(--acc);border:1px solid var(--acc)}
 footer{text-align:center;color:#7d6f68;font:12px system-ui,sans-serif;padding:0 16px 32px}
-@media (max-width:480px){.book{grid-template-columns:96px 1fr}.book img{width:96px}header h1{font-size:25px}}
 </style></head><body>
 <header><h1>📚 Book Lover&#x27;s Corner</h1><p>Hand-picked reads you won&#x27;t put down</p></header>
+<nav><button class="on" data-c="all">All</button><button data-c="Mafia &amp; Cartel">Mafia &amp; Cartel</button><button data-c="Romance">Romance</button><button data-c="Historical">Historical</button><button data-c="Military &amp; War">Military &amp; War</button><button data-c="Fantasy">Fantasy</button></nav>
 <main>
-<article class="book">
-  <img src="covers/B0HHK3G6FF.jpg" alt="First Blood at Capua cover" loading="lazy">
-  <div><h2>First Blood at Capua</h2>
-  <div class="by">Blood and Sand of the Empire Book 1 · Rogue Mane</div>
-  <div class="tags"><span>Historical Fantasy</span><span>Reincarnation</span><span>Military Tactics</span><span>Gladiator Arena</span></div>
-  <p class="desc">A modern special operations commander dies in fire, only to wake in chains on the blood-soaked stones of Ancient Rome.</p>
-  <a class="btn" href="https://www.amazon.com/dp/B0HHK3G6FF" target="_blank" rel="noopener">Read on Amazon →</a></div>
-</article>
-<article class="book">
-  <img src="covers/B0HFYNJ8X5.jpg" alt="Bleeding Sweet Surrender On The Altar Of Our Enemies cover" loading="lazy">
-  <div><h2>Bleeding Sweet Surrender On The Altar Of Our Enemies</h2>
-  <div class="by">Peter Champagne</div>
+
+<section class="series" data-cats="Mafia &amp; Cartel|Romance">
+  <h2>Bleeding Sweet Surrender On The Altar Of Our Enemies</h2><div class="meta">3 books in series · Peter Champagne</div>
   <div class="tags"><span>Enemies to lovers</span><span>Arranged marriage</span><span>Dark cartel romance</span><span>Captive romance</span></div>
   <p class="desc">I was traded like cattle in a bloodstained wedding dress. Bound to a merciless executioner under the gaze of Santa Muerte. They called me collateral. They thought I would break.</p>
-  <a class="btn" href="https://www.amazon.com/dp/B0HFYNJ8X5" target="_blank" rel="noopener">Read on Amazon →</a></div>
-</article>
+  <div class="vols"><a class="vol" href="https://www.amazon.com/dp/B0HFYNJ8X5" target="_blank" rel="noopener"><img src="covers/B0HFYNJ8X5.jpg" alt="Bleeding Sweet Surrender On The Altar Of Our Enemies - Book 1" loading="lazy"><b>Book 1</b><span>Bleeding Sweet Surrender On The Altar Of Our Enemies - Book 1</span></a><a class="vol" href="https://www.amazon.com/dp/B0HFYD1QYF" target="_blank" rel="noopener"><img src="covers/B0HFYD1QYF.jpg" alt="Bleeding Sweet Surrender On The Altar Of Our Enemies - Book 2" loading="lazy"><b>Book 2</b><span>Bleeding Sweet Surrender On The Altar Of Our Enemies - Book 2</span></a><a class="vol" href="https://www.amazon.com/dp/B0HFY55MW9" target="_blank" rel="noopener"><img src="covers/B0HFY55MW9.jpg" alt="Bleeding Sweet Surrender On The Altar Of Our Enemies - Book 3" loading="lazy"><b>Book 3</b><span>Bleeding Sweet Surrender On The Altar Of Our Enemies - Book 3</span></a></div>
+  <a class="btn" href="https://www.amazon.com/dp/B0HFYNJ8X5" target="_blank" rel="noopener">Start with Book 1 →</a><a class="btn ghost" href="https://www.amazon.com/dp/B0HFZ638HF" target="_blank" rel="noopener">See full series</a>
+</section>
+<section class="series" data-cats="Historical|Military &amp; War|Fantasy">
+  <h2>Blood and Sand of the Empire</h2><div class="meta">3 books in series · Rogue Mane</div>
+  <div class="tags"><span>Historical Fantasy</span><span>Reincarnation</span><span>Military Tactics</span><span>Gladiator Arena</span></div>
+  <p class="desc">A modern special operations commander dies in fire, only to wake in chains on the blood-soaked stones of Ancient Rome.</p>
+  <div class="vols"><a class="vol" href="https://www.amazon.com/dp/B0HHK3G6FF" target="_blank" rel="noopener"><img src="covers/B0HHK3G6FF.jpg" alt="First Blood at Capua" loading="lazy"><b>Book 1</b><span>First Blood at Capua</span></a><a class="vol" href="https://www.amazon.com/dp/B0HHWVJPFZ" target="_blank" rel="noopener"><img src="covers/B0HHWVJPFZ.jpg" alt="The Vesuvius Gambit" loading="lazy"><b>Book 3</b><span>The Vesuvius Gambit</span></a><a class="vol" href="https://www.amazon.com/dp/B0HHX52WS2" target="_blank" rel="noopener"><img src="covers/B0HHX52WS2.jpg" alt="The Consular War" loading="lazy"><b>Book 4</b><span>The Consular War</span></a></div>
+  <a class="btn" href="https://www.amazon.com/dp/B0HHK3G6FF" target="_blank" rel="noopener">Start with Book 1 →</a><a class="btn ghost" href="https://www.amazon.com/dp/B0HHK1VN4V" target="_blank" rel="noopener">See full series</a>
+</section>
 </main>
-<footer>Links go to Amazon.</footer></body></html>
+<footer>Book links go to Amazon.</footer><script>
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
+ document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x===b));
+ const c=b.dataset.c;document.querySelectorAll('.series').forEach(s=>{
+  s.style.display=(c==='all'||s.dataset.cats.split('|').includes(c))?'':'none'})});
+</script></body></html>
